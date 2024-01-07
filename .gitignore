@@ -1,0 +1,33 @@
+# .gitignore
+
+# Flask related files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Flask configuration files
+instance/
+config.py
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore any compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore local configuration
+*.flaskenv
+*.env
