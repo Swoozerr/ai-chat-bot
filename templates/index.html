@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Lucas C" description="ai chat bot"
+
+    <title>AI Chat Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- linking stylesheet for flask -->
+</head>
+<body>
+    <div class="hero"> <!-- basic main section for chat gpt image and sm text-->
+
+    </div>
+    <div id="chat__group"> <!-- group to store all previous chats, append into group as q/a processes... -->
+
+        <div class="chat">Example Chat (for dev purpose)</div>
+
+    </div>
+    <div id="input__group"> <!-- input form for posting questions to the open ai api -->
+        <input type="text" class="input__form" name="question" placeholder="Ask the Ai..." required>
+        <button class="input__btn">Send Question</button>
+    </div>
+    <div class="footer"> <!-- footer for sig and other stuff -->
+
+    </div>
+</body>
+</html>

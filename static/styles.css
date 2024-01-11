@@ -1,0 +1,17 @@
+body {
+    background-image: url('../images/ryan-loughlin-f1Kbt5NC8-I-unsplash.jpg');
+    background-size: cover;
+    margin: 0; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); 
+    z-index: -99; /* ensure this background stays in the back */
+}
+/* CHAT GROUP SECTION ----------------------------------------- */
+/* INPUT GROUP SECTION ----------------------------------------- */
+#input__group {
+    display: flex; 
+}
+/* FOOTER SECTION ----------------------------------------- */

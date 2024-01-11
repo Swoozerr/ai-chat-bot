@@ -13,21 +13,7 @@ env/
 *.pyo
 *.pyd
 
-# Ignore Flask configuration files
-instance/
-config.py
-
-# Ignore IDE-specific files and directories
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Ignore any compiled Python files
-*.pyc
-*.pyo
-*.pyd
-
-# Ignore local configuration
+# Ignore local files
 *.flaskenv
 *.env
+dev_config.py
