@@ -1,15 +1,20 @@
 body {
-    background-image: url('../images/ryan-loughlin-f1Kbt5NC8-I-unsplash.jpg');
+    background-image: url('../static/images/ryan-loughlin-f1Kbt5NC8-I-unsplash.jpg');
     background-size: cover;
     margin: 0; 
+    padding: 5vh 10vw;
     height: 100vh; 
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px); 
     z-index: -99; /* ensure this background stays in the back */
 }
 /* CHAT GROUP SECTION ----------------------------------------- */
+#chat__group{
+    font-size: 2rem;
+}
 /* INPUT GROUP SECTION ----------------------------------------- */
 #input__group {
     display: flex; 
