@@ -1,4 +1,5 @@
 body {
+    font-family: 'Noto Sans', sans-serif;
     background-image: url('../static/images/ryan-loughlin-f1Kbt5NC8-I-unsplash.jpg');
     background-size: cover;
     margin: 0; 
@@ -11,12 +12,68 @@ body {
     backdrop-filter: blur(5px); 
     z-index: -99; /* ensure this background stays in the back */
 }
+/* HERO GROUP SECTION ----------------------------------------- */
+
 /* CHAT GROUP SECTION ----------------------------------------- */
 #chat__group{
+    margin: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 300px;
+    border: 2px dashed #000; 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* alpha value for transparency */
+}
+
+.user__chat { 
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.bot__chat { 
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
     font-size: 2rem;
 }
 /* INPUT GROUP SECTION ----------------------------------------- */
 #input__group {
-    display: flex; 
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: none;
+    border-radius: 5px;
+    display: flex;
+}
+
+.input__form {
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.input__btn{
+    padding: 8px;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.input__btn:hover{
+    background-color: rgb(190, 39, 12);
+    transition: ease-in-out 0.15s;
 }
 /* FOOTER SECTION ----------------------------------------- */

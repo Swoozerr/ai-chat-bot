@@ -7,14 +7,19 @@
 
     <title>AI Chat Bot</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- linking stylesheet for flask -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- import google font using provided API -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero"> <!-- basic main section for chat gpt image and sm text-->
-
+    <div class="hero__group"> <!-- basic main section for chat gpt image and sm text-->
+        <img class="gpt__icon" src="/static/images/gpt_icon.png">
+        <p class="gpt__icon">chat gpt bot (placeholder explanation text)</p>
     </div>
     <div id="chat__group"> <!-- group to store all previous chats, append into group as q/a processes... -->
 
-        <div class="chat">Example Chat (for dev purpose)</div>
+        <div class="user__chat">Example chat of user (for dev purpose)</div>
+        <div class="bot__chat">Example chat of bot (for dev purpose)</div>
 
     </div>
     <div id="input__group"> <!-- input form for posting questions to the open ai api -->
@@ -24,5 +29,7 @@
     <div class="footer"> <!-- footer for sig and other stuff -->
 
     </div>
+
+
 </body>
 </html>
