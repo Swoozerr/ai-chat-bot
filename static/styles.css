@@ -2,9 +2,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     background-image: url('../static/images/ryan-loughlin-f1Kbt5NC8-I-unsplash.jpg');
     background-size: cover;
-    margin: 0; 
-    padding: 5vh 10vw;
-    height: 100vh; 
+    margin-top: 5vh; 
+    padding: 0 20vw;
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -13,37 +12,88 @@ body {
     z-index: -99; /* ensure this background stays in the back */
 }
 /* HERO GROUP SECTION ----------------------------------------- */
+.hero__group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gpt__icon{
+    max-width: 20vw;
+    max-height: 20vh;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* preserve aspect ratio */
+}
 
+.gpt__text{
+    font-size: large;
+}
 /* CHAT GROUP SECTION ----------------------------------------- */
 #chat__group{
     margin: 10px;
     overflow-y: auto;
     padding: 10px;
     box-sizing: border-box;
-    height: 300px;
+    height: 45vh;
     border: 2px dashed #000; 
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5); /* alpha value for transparency */
 }
 
+/* scroll bar for chat__group */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #75726f;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #575552;
+    }
+/* scroll bar section end */
+
 .user__chat { 
-    background-color: #e5e5e5;
+    display: flex;
+    background-color: #c9c6c6;
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-style: italic;
 }
 
+.user__chat img {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+
 .bot__chat { 
+    display: flex;
     background-color: #e5e5e5;
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
+
+.bot__chat img{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+
 /* INPUT GROUP SECTION ----------------------------------------- */
 #input__group {
     margin: 10px;

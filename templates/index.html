@@ -12,24 +12,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero__group"> <!-- basic main section for chat gpt image and sm text-->
+    <!-- basic main section for chat gpt image and sm text-->
+    <div class="hero__group"> 
         <img class="gpt__icon" src="/static/images/gpt_icon.png">
-        <p class="gpt__icon">chat gpt bot (placeholder explanation text)</p>
+        <p class="gpt__text">chat gpt bot (placeholder explanation text)</p>
     </div>
-    <div id="chat__group"> <!-- group to store all previous chats, append into group as q/a processes... -->
-
-        <div class="user__chat">Example chat of user (for dev purpose)</div>
-        <div class="bot__chat">Example chat of bot (for dev purpose)</div>
-
+    
+    <!-- group to store all previous chats, append into group as q/a processes... -->
+    <div id="chat__group"> 
+        <div class="bot__chat">
+            <img src="/static/images/gpt_icon_chat.png" alt="gpt chat icon">
+            <p>chat of bot (for dev purpose)</p>
+        </div>
+        <div class="bot__chat">
+            <img src="/static/images/gpt_icon_chat.png" alt="gpt chat icon">
+            <p>Example chat of longer bot input 
+            Example chat of longer bot input 
+            Example chat of longer bot input 
+            Example chat of longer bot input 
+            Example chat of longer bot input 
+            (for dev purpose)
+            </p>
+        </div>
     </div>
-    <div id="input__group"> <!-- input form for posting questions to the open ai api -->
+    
+    <!-- input form for posting questions to the open ai api -->
+    <div id="input__group"> 
         <input type="text" class="input__form" name="question" placeholder="Ask the Ai..." required>
         <button class="input__btn">Send Question</button>
     </div>
-    <div class="footer"> <!-- footer for sig and other stuff -->
 
+    <!-- footer for sig and other stuff -->
+    <div class="footer"> 
+        <p>Lucas C | 2024</p>
     </div>
 
+    <!-- use jquery to handle requests to openAi api -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <script>
+        // define input_btn click event action
+        $(".input__btn").click(function() { 
+            // get question from input form
+            var question = $(".input__form").val();
 
+            // add question to the chat group
+            let question_html = '';
+            question_html += `
+            <div class="user__chat">
+                <img src="/static/images/ask_icon.png" alt="ask icon">
+                <p> ${question} </p>
+            </div>
+            `;
+            $(".input__form").val(''); // clear input form for next question
+            $("#chat__group").append(question_html) // append to chat group
+            $("#chat__group").scrollTop($("#chat__group")[0].scrollHeight); // scroll down to the bottom of the chat group
+        });
+    </script>
+    
 </body>
 </html>

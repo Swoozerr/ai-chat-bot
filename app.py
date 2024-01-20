@@ -1,8 +1,9 @@
 from flask import Flask, render_template, jsonify, request
 import openai
-import config
+from config import Config
 
 app = Flask(__name__)
+app.config.from_object(Config) 
 
 # root path context
 @app.route('/', methods=['GET', 'POST'])
