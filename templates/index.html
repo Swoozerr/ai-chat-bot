@@ -66,6 +66,25 @@
             $(".input__form").val(''); // clear input form for next question
             $("#chat__group").append(question_html) // append to chat group
             $("#chat__group").scrollTop($("#chat__group")[0].scrollHeight); // scroll down to the bottom of the chat group
+
+            // call to server using ajax
+            $.ajax({
+                type: "POST", // type of call
+                url: "/", // route of call
+                data: JSON.stringify({"query": question }), // data to be set to server as JSON
+                success: function(data) { // success in ajax call, create bot chat like we did with html by using the returned data
+                    let answer_html = '';
+                    answer_html += `
+                    <div class="user__chat">
+                        <img src="/static/images/gpt_icon_chat.png" alt="ask icon">
+                        <p> ${data.answer} </p>
+                    </div>
+                    `;
+                    $("#chat__group").append(answer_html) // append to chat group
+                    $("#chat__group").scrollTop($("#chat__group")[0].scrollHeight); // scroll down to the bottom of the chat group
+                }
+            })
+
         });
     </script>
     

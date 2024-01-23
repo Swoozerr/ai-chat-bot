@@ -17,3 +17,4 @@ env/
 *.flaskenv
 *.env
 dev_config.py
+dev_app.py
