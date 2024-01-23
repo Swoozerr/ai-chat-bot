@@ -2,33 +2,27 @@ import dev_config
 from openai import OpenAI
 
 client = OpenAI(
-  api_key=os.environ['OPENAI_API_KEY'],  # this is also the default, it can be omitted
+  api_key=dev_config.Config.OPENAI_API_KEY,  # this is also the default, it can be omitted
 )
-
- #set api key
-
-def defineBot(define):
-    return None
 
 def getResponse(query):
     messages = []
     messages.append({"role": "system", "content": "You are a helpful assistant."})
     
     # get question from func call
-    question = {}
-    question['role'] = 'user'
-    question['content'] = query;
+    question = {'role': 'user', 'content': query}
     messages.append(question)
 
-    # send to gpt, get response 
-    response = openai.Completion.create( engine="gpt-3.5-turbo", messages=messages)
-    answer = response['choices'][0]['message']['content']
-
-    #TODO
-    if response['choices'][0]['finish_reason'] != 'stop':
-        return "failed to acquire answer due to..."
+    # send to gpt, get response from pydantic model
+    response = client.completions.create(model="gpt-3.5-turbo", prompt=messages)
+    answer = response.choices[0].text
 
     return answer
+
+
+def defineBot(define):
+    return None
+
 
 
 
