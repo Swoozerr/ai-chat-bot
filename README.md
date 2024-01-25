@@ -1,41 +1,40 @@
 # AI Chat Bot
 
-...format later
 
-How to start:
-# Update pip
+## How to start:
+### Update pip
 pip install --upgrade pip
 
-# Create a virtual environment 
+### Create a virtual environment 
 python -m venv venv
 
-# Activate the virtual environment (make sure you have admin privileges on your system)
-## On Windows
+### Activate the virtual environment (make sure you have admin privileges on your system)
+- On Windows
 venv\Scripts\activate
-## On macOS/Linux
+- On macOS/Linux
 source venv/bin/activate
 
-# Install flask
+###  Install flask
 pip install flask
 
-# Install OpenAi Api
+###  Install OpenAi Api
 pip install openai
 
-# Running the App
+###  Running the App
 1. set up config by grabbing your OpenAI API key after creating an OpenAi Account
 2. run python app.py in terminal to initialize flask app on a dev server
 
-# Migrating to new OpenAI Version
+## Migrating to new OpenAI Version
 abridged from https://github.com/openai/openai-python/discussions/742
 
-# upgrade to new version
+### Upgrade to newest version
 pip install --upgrade openai
 
-# migrate using grit
-## On macOS/Linux
+### Migrate using grit
+- On macOS/Linux
 openai migrate
 
-## Windows
+- On Windows
 (taken from docs directly)
 Automatic migration with grit on Windows
 To use grit to migrate your code on Windows, you will need to use Windows Subsystem for Linux (WSL). Installing WSL is quick and easy, and you do not need to keep using Linux once the command is done.
@@ -51,4 +50,4 @@ grit install
 grit apply openai
 Then, you can close WSL and go back to using Windows.
 
-# should be good to go now
+### openai should be installed now

@@ -22,17 +22,7 @@
     <div id="chat__group"> 
         <div class="bot__chat">
             <img src="/static/images/gpt_icon_chat.png" alt="gpt chat icon">
-            <p>chat of bot (for dev purpose)</p>
-        </div>
-        <div class="bot__chat">
-            <img src="/static/images/gpt_icon_chat.png" alt="gpt chat icon">
-            <p>Example chat of longer bot input 
-            Example chat of longer bot input 
-            Example chat of longer bot input 
-            Example chat of longer bot input 
-            Example chat of longer bot input 
-            (for dev purpose)
-            </p>
+            <p>Hi there! How can I help you today?</p>
         </div>
     </div>
     
@@ -71,12 +61,13 @@
             $.ajax({
                 type: "POST", // type of call
                 url: "/", // route of call
-                data: JSON.stringify({"query": question }), // data to be set to server as JSON
+                contentType: "application/json", // specify sent content is json
+                data: JSON.stringify({"query": question }), // data to be sent to server as JSON
                 success: function(data) { // success in ajax call, create bot chat like we did with html by using the returned data
                     let answer_html = '';
                     answer_html += `
-                    <div class="user__chat">
-                        <img src="/static/images/gpt_icon_chat.png" alt="ask icon">
+                    <div class="bot__chat">
+                        <img src="/static/images/gpt_icon_chat.png" alt="bot icon">
                         <p> ${data.answer} </p>
                     </div>
                     `;

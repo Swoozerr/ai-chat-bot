@@ -1,23 +1,33 @@
 import dev_config
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 
 client = OpenAI(
   api_key=dev_config.Config.OPENAI_API_KEY,  # this is also the default, it can be omitted
 )
 
 def getResponse(query):
-    messages = []
-    messages.append({"role": "system", "content": "You are a helpful assistant."})
+    try:
+      messages = []
+      messages.append({"role": "system", "content": "You are a helpful assistant."})
+      
+      # get question from func call
+      question = {'role': 'user', 'content': query}
+      messages.append(question)
+
+      # send to gpt, get response from pydantic model
+      response = client.chat.completions.create(model="gpt-3.5-turbo", messages=messages)
+      print(response)
+
+      # access the generated text from the response
+      answer = response.choices[0].message.content
+      
+      return answer
     
-    # get question from func call
-    question = {'role': 'user', 'content': query}
-    messages.append(question)
+    # responds with rate limit error if your plan has exceeded use rate
+    except RateLimitError as e:
+        print(f"RateLimitError: {e}")
+        return "Rate limit exceeded. Check your OpenAI plan and billing details."
 
-    # send to gpt, get response from pydantic model
-    response = client.completions.create(model="gpt-3.5-turbo", prompt=messages)
-    answer = response.choices[0].text
-
-    return answer
 
 
 def defineBot(define):
