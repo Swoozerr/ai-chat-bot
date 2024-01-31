@@ -50,4 +50,4 @@ grit install
 grit apply openai
 Then, you can close WSL and go back to using Windows.
 
-### openai should be installed now
+### openai should be installed in your venv now
