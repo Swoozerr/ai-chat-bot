@@ -18,16 +18,29 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* for spinning the gpt icon */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 .gpt__icon{
     max-width: 20vw;
     max-height: 20vh;
     width: 100%;
     height: 100%;
     object-fit: contain; /* preserve aspect ratio */
+    animation: spin 6s linear infinite;
 }
 
 .gpt__text{
-    font-size: large;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 
+    2px -2px 0 #000, 
 }
 /* CHAT GROUP SECTION ----------------------------------------- */
 #chat__group{
@@ -36,6 +49,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     height: 45vh;
+    min-width: 70vw;
     border: 2px dashed #000; 
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5); /* alpha value for transparency */
@@ -59,7 +73,6 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: #575552;
     }
-/* scroll bar section end */
 
 .user__chat { 
     display: flex;
@@ -96,29 +109,35 @@ body {
 
 /* INPUT GROUP SECTION ----------------------------------------- */
 #input__group {
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-top: none;
-    border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     display: flex;
+    align-items: center;
 }
 
 .input__form {
     flex: 1;
-    padding: 8px;
-    box-sizing: border-box;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input__form:focus {
+    outline: none;
+    border-color: dodgerblue;
 }
 
 .input__btn{
-    padding: 8px;
+    padding: 10px 20px;
     background-color: tomato;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
 }
 

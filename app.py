@@ -14,14 +14,16 @@ def get_index():
 # handle ajax question call to ask a question
 @app.route('/', methods=['POST'])
 def post_index():
-    data = request.form.get('query')  # get data from ajax
-    answer = gpt_api.getResponse(data) # use getResponse method to get response from openAI given query
-
-    # create json obj with 'answer:generated answer' pair and return to ajax call
-    response = {}
-    response['answer'] = answer
-    return jsonify(response)    
-
+    data = request.get_json() # get json data from ajax
+    
+    if data and 'query' in data:
+        message = data['query']
+        answer = gpt_api.getResponse(message) # get gpt response using method from gpt_api
+        
+        # create json object with 'answer: generated answer' pair and return to ajax call
+        response = {'answer': answer}
+        return jsonify(response)
+    
 # for running app.py when exectued, not when imported
 if __name__ == "__main__":
     app.run(debug=True)

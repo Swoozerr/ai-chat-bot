@@ -16,10 +16,10 @@ def getResponse(query):
 
       # send to gpt, get response from pydantic model
       response = client.chat.completions.create(model="gpt-3.5-turbo", messages=messages)
-      print(response)
 
       # access the generated text from the response
       answer = response.choices[0].message.content
+      answer = answer.replace('\n', '<br>') # formatting for html
       
       return answer
     
@@ -28,12 +28,8 @@ def getResponse(query):
         print(f"RateLimitError: {e}")
         return "Rate limit exceeded. Check your OpenAI plan and billing details."
 
-
-
 def defineBot(define):
     return None
-
-
 
 
 # documentation ...
