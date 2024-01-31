@@ -1,5 +1,5 @@
 # AI Chat Bot
-This chat bot is an AI-driven chat bot powered by OpenAI's language models, specifically utilizing their chat completions API (found [here] (https://platform.openai.com/docs/guides/text-generation/chat-completions-api)). Ask the bot anything you like and an answer will be sent back in seconds.
+This chat bot is an AI-driven chat bot powered by OpenAI's language models, specifically utilizing their chat completions API (found [here](https://platform.openai.com/docs/guides/text-generation/chat-completions-api)). Ask the bot anything you like and an answer will be sent back in seconds.
 
 ## How to start:
 ### Update pip
