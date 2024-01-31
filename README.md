@@ -28,7 +28,7 @@ pip install flask
 pip install openai
 ```
 
-###  Running the App
+##  Running the App
 1. Set up config by grabbing your OpenAI API key after creating an OpenAI account
 2. Run python app.py in terminal to initialize flask app on a dev server
 
