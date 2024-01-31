@@ -9,23 +9,31 @@ pip install --upgrade pip
 python -m venv venv
 
 ### Activate the virtual environment (make sure you have admin privileges on your system)
-- On Windows
+- *On Windows*:
+```
 venv\Scripts\activate
-- On macOS/Linux
+```
+- *On macOS/Linux*:
+``` 
 source venv/bin/activate
+```
 
 ###  Install flask
+```
 pip install flask
+```
 
 ###  Install OpenAi Api
+```
 pip install openai
+```
 
 ###  Running the App
-1. set up config by grabbing your OpenAI API key after creating an OpenAi Account
-2. run python app.py in terminal to initialize flask app on a dev server
+1. Set up config by grabbing your OpenAI API key after creating an OpenAI account
+2. Run python app.py in terminal to initialize flask app on a dev server
 
-## Migrating to new OpenAI Version
-abridged from https://github.com/openai/openai-python/discussions/742
+# Migrating to new OpenAI Version **if Needed**
+*abridged from [here](https://github.com/openai/openai-python/discussions/742)*
 
 ### Upgrade to newest version
 pip install --upgrade openai
