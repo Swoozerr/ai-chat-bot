@@ -33,8 +33,8 @@ pip install openai
 ```
 
 ##  Running and using the App
-1. Set up config by grabbing your OpenAI API key after creating an OpenAI account and placing the key in the config.py file
-2. Run python app.py in terminal to initialize flask app on a dev server
+1. Set up config by grabbing your OpenAI API key after creating an OpenAI account and placing the key in the config.py file.
+2. Run python app.py in terminal to initialize flask app on a dev server.
 3. Use the input form to send any message you like to the bot!
 
 # Migrating to new OpenAI Version **if Needed**
