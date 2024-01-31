@@ -3,32 +3,32 @@ This chat bot is an AI-driven chat bot powered by OpenAI's language models, spec
 
 ## How to start:
 ### Update pip
-```
+```python
 pip install --upgrade pip
 ```
 
 ### Create a virtual environment 
-```
+```python
 python -m venv venv
 ```
 
 ### Activate the virtual environment (make sure you have admin privileges on your system)
 - *On Windows*:
-```
+```python
 venv\Scripts\activate
 ```
 - *On macOS/Linux*:
-``` 
+```python
 source venv/bin/activate
 ```
 
 ###  Install flask
-```
+```python
 pip install flask
 ```
 
 ###  Install OpenAi Api
-```
+```python
 pip install openai
 ```
 
