@@ -35,6 +35,8 @@ pip install openai
 ##  Running the App
 1. Set up config by grabbing your OpenAI API key after creating an OpenAI account
 2. Run python app.py in terminal to initialize flask app on a dev server
+3. Open up the http server in a browser such as Google Chrome
+4. Type a question into the input form and click send. The bot will return a response in the chat box in a moment.
 
 # Migrating to new OpenAI Version **if Needed**
 If OpenAI cannot be installed or is out of date, please read the OpenAI v1.0.0 migration guide post found [here](https://github.com/openai/openai-python/discussions/742)

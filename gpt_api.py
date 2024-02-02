@@ -28,9 +28,6 @@ def getResponse(query):
         print(f"RateLimitError: {e}")
         return "Rate limit exceeded. Check your OpenAI plan and billing details."
 
-def defineBot(define):
-    return None
-
 
 # documentation ...
 """
